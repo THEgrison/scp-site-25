@@ -28,32 +28,21 @@
     <p>"L'avenir n'attend que vous"</p>
   </div>
 </section>
-
-<!-- Section Présentation -->
+  
 <section id="presentation" class="section">
-  <h2>Qui sommes-nous ?</h2>
+  <h2>Nos projets</h2>
 
   <div class="carousel">
     <button class="carousel-btn left">&#10094;</button>
 
-    <div class="carousel-track-container">
-      <ul class="carousel-track">
-        <li class="carousel-slide current-slide">
-          <p>Site 25 est un projet développé par Floppa Corporation, dédié à offrir une expérience immersive sur Roblox.</p>
-        </li>
-        <li class="carousel-slide">
-          <p>Projet Floppa City : une simulation de vie dans une ville futuriste sur Roblox.</p>
-        </li>
-        <li class="carousel-slide">
-          <p>Projet SCP: Une aventure mystérieuse inspirée des légendes de Site 25.</p>
-        </li>
-      </ul>
+    <div class="carousel-content">
+      <h3 id="project-title">Site 25</h3>
+      <p id="project-description">Site 25 est un projet développé par Floppa Corporation, dédié à offrir une expérience immersive sur Roblox.</p>
+      <a id="project-button" href="#" class="btn">En savoir plus</a>
     </div>
 
     <button class="carousel-btn right">&#10095;</button>
   </div>
-
-  <a href="#" class="btn">En savoir plus</a>
 </section>
 
 <!-- Section Discord -->
@@ -69,25 +58,44 @@
 </footer>
   
 <script>
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const nextButton = document.querySelector('.carousel-btn.right');
-  const prevButton = document.querySelector('.carousel-btn.left');
-  let currentSlideIndex = 0;
+  const projects = [
+    {
+      title: "Site 25",
+      description: "Site 25 est un projet développé par Floppa Corporation, dédié à offrir une expérience immersive sur Roblox.",
+      buttonLink: "#",
+    },
+    {
+      title: "Floppa City",
+      description: "Floppa City est une simulation de vie dans une métropole futuriste sur Roblox.",
+      buttonLink: "#",
+    },
+    {
+      title: "SCP Project",
+      description: "Un jeu mystérieux basé sur l'univers SCP, avec des secrets et des explorations uniques.",
+      buttonLink: "#",
+    }
+  ];
 
-  function updateSlide(position) {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = 'translateX(-' + (slideWidth * position) + 'px)';
+  let currentProject = 0;
+
+  const title = document.getElementById('project-title');
+  const description = document.getElementById('project-description');
+  const button = document.getElementById('project-button');
+
+  function updateProject(index) {
+    title.textContent = projects[index].title;
+    description.textContent = projects[index].description;
+    button.href = projects[index].buttonLink;
   }
 
-  nextButton.addEventListener('click', () => {
-    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-    updateSlide(currentSlideIndex);
+  document.querySelector('.carousel-btn.right').addEventListener('click', () => {
+    currentProject = (currentProject + 1) % projects.length;
+    updateProject(currentProject);
   });
 
-  prevButton.addEventListener('click', () => {
-    currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-    updateSlide(currentSlideIndex);
+  document.querySelector('.carousel-btn.left').addEventListener('click', () => {
+    currentProject = (currentProject - 1 + projects.length) % projects.length;
+    updateProject(currentProject);
   });
 </script>
 </body>

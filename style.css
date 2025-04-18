@@ -1,193 +1,3 @@
-/* Style Global */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  scroll-behavior: smooth;
-  background-color: #000;
-  color: white;
-  overflow-x: hidden;
-}
-
-/* Hero Section */
-.hero {
-  background: url('Frame 2.png') center/cover no-repeat;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Menu */
-.menu {
-  background: rgba(0, 0, 0, 0.6);
-  margin: 20px auto;
-  padding: 10px 30px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-}
-
-.logo img {
-  height: 50px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #6a74e8;
-}
-
-/* Contenu Hero Center */
-.hero-content {
-  text-align: center;
-  margin-bottom: 100px;
-}
-
-.hero-content h1 {
-  font-size: 4em;
-  margin: 0;
-}
-
-.hero-content p {
-  font-size: 1.5em;
-}
-
-/* Sections Génériques */
-.section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-/* Boutons */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 30px;
-  border: 2px solid white;
-  border-radius: 30px;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: white;
-  color: black;
-}
-
-/* Footer */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #aaa;
-}
-
-/* Section Présentation */
-#presentation {
-  position: relative;
-  background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('screen.png') center/cover no-repeat;
-  padding: 80px 20px;
-  text-align: center;
-  margin: 40px auto;
-  max-width: 90%;
-  border-radius: 10px;
-  color: white;
-  transition: transform 0.3s ease;
-}
-
-#presentation:hover {
-  transform: scale(1.05);
-}
-
-#presentation h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-#presentation p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-}
-
-#presentation .btn {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#presentation .btn:hover {
-  background-color: white;
-  color: black;
-}
-
-/* Section Discord */
-#discord {
-  position: relative;
-  width: 100%;
-  padding: 80px 20px;
-  text-align: center;
-  color: white;
-  overflow: hidden;
-  margin: 0;
-  border-radius: 0;
-  background: url('discord.jpg') center/cover no-repeat; /* Image nette */
-}
-
-/* Ajout d'un overlay foncé sur l'image */
-#discord::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Halo noir */
-  z-index: 1;
-}
-
-/* Contenu visible */
-#discord > * {
-  position: relative;
-  z-index: 2; /* Assurer que le contenu est au-dessus de l'overlay */
-}
-
-#discord h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-#discord p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-}
-
-#discord .btn {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Bouton Play spécifique dans Hero */
 .play-btn {
   margin-top: 30px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -196,7 +6,12 @@ footer {
   padding: 12px 30px;
   font-size: 1.2rem;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 
 .play-btn:hover {
@@ -205,8 +20,10 @@ footer {
   transform: scale(1.1);
 }
 
-#discord .btn:hover {
-  background-color: white;
-  color: black;
-  transform: scale(1.05);
+.play-btn svg {
+  transition: fill 0.3s ease;
+}
+
+.play-btn:hover svg {
+  fill: black;
 }

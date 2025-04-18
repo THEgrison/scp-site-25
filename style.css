@@ -98,46 +98,38 @@ footer {
   color: #aaa;
 }
 
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 50px 0;
+/* Style de la section */
+#presentation {
+    background: #2c3e50; /* Couleur de fond sombre */
+    color: white; /* Texte en blanc */
+    padding: 40px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    text-align: center; /* Centrer le texte */
+    margin: 20px auto; /* Espacement externe */
+    max-width: 800px; /* Largeur maximale de la section */
 }
 
-.carousel-content {
-  text-align: center;
-  max-width: 600px;
-  transition: opacity 0.5s ease;
+#presentation h2 {
+    font-size: 2rem; /* Taille du titre */
+    margin-bottom: 10px; /* Espace sous le titre */
+    font-weight: bold;
 }
 
-/* Boutons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 5rem; /* plus grand */
-  color: #555; /* couleur plus douce */
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.3s ease;
+#presentation p {
+    font-size: 1.2rem; /* Taille du texte */
+    margin-bottom: 20px; /* Espace sous le texte */
 }
 
-/* Flèche gauche */
-.carousel-btn.left {
-  left: 20px; /* proche du bord gauche */
+#presentation .btn {
+    background-color: #3498db; /* Couleur du bouton */
+    color: white; /* Texte en blanc */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    text-decoration: none; /* Supprimer le soulignement */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Transition de la couleur */
 }
 
-/* Flèche droite */
-.carousel-btn.right {
-  right: 20px; /* proche du bord droit */
-}
-
-/* Hover effet */
-.carousel-btn:hover {
-  color: #000; /* plus foncé au survol */
+#presentation .btn:hover {
+    background-color: #2980b9; /* Couleur au survol du bouton */
 }

@@ -147,36 +147,13 @@ footer {
   overflow: hidden;
   margin: 0;
   border-radius: 0;
-}
-
-/* Image de fond nette + halo noir */
-#discord::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('discord.jpg') center/cover no-repeat;
-  z-index: 1;
-}
-
-/* Couche noire supplémentaire */
-#discord::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Halo noir */
-  z-index: 2;
+  background: url('discord.jpg') center/cover no-repeat; /* Image nette */
 }
 
 /* Contenu visible */
 #discord > * {
   position: relative;
-  z-index: 3;
+  z-index: 1; /* Assurer que le contenu est au-dessus de l'image */
 }
 
 #discord h2 {

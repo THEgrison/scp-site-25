@@ -98,15 +98,23 @@ footer {
   color: #aaa;
 }
 
-/* Style de la section */
+/* Style de la section avec image de fond */
 #presentation {
-    background: #2c3e50; /* Couleur de fond sombre */
+    background-image: url('ton-image.jpg'); /* Remplace 'ton-image.jpg' par le chemin de ton image */
+    background-position: center;
+    background-size: cover; /* L'image couvre toute la section */
+    background-repeat: no-repeat;
     color: white; /* Texte en blanc */
     padding: 40px; /* Espacement interne */
     border-radius: 10px; /* Coins arrondis */
     text-align: center; /* Centrer le texte */
     margin: 20px auto; /* Espacement externe */
     max-width: 800px; /* Largeur maximale de la section */
+    transition: transform 0.3s ease; /* Transition pour le zoom */
+}
+
+#presentation:hover {
+    transform: scale(1.1); /* Zoom au survol */
 }
 
 #presentation h2 {

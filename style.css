@@ -141,3 +141,15 @@ footer {
 #presentation .btn:hover {
     background-color: #ffffff; /* Couleur au survol du bouton */
 }
+
+#discord {
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), /* Halo noir semi-transparent */
+        url('discord.jpg') center/cover no-repeat; /* Image en fond */
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 90%;
+}

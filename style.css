@@ -150,10 +150,22 @@ footer {
   background: url('discord.jpg') center/cover no-repeat; /* Image nette */
 }
 
+/* Ajout d'un overlay foncé sur l'image */
+#discord::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Halo noir */
+  z-index: 1;
+}
+
 /* Contenu visible */
 #discord > * {
   position: relative;
-  z-index: 1; /* Assurer que le contenu est au-dessus de l'image */
+  z-index: 2; /* Assurer que le contenu est au-dessus de l'overlay */
 }
 
 #discord h2 {

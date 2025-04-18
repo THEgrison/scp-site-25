@@ -70,11 +70,6 @@ body, html {
   text-align: center;
 }
 
-/* Sections sombres */
-.dark-section {
-  background: radial-gradient(circle at center, #6a74e8, black);
-}
-
 /* Boutons */
 .btn {
   display: inline-block;

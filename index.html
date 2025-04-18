@@ -40,7 +40,7 @@
   <h2>Contactez-nous</h2>
   <p>Une question ? Un projet ? Envoyez-nous un message via Discord !</p>
   <form class="contact-form" id="contact-form">
-    <input type="text" id="name" placeholder="Votre nom" required>
+    <input type="text" id="name" placeholder="Votre pseudo Discord" required>
     <input type="email" id="email" placeholder="Votre e-mail" required>
     <textarea id="message" placeholder="Votre message..." required></textarea>
     <button type="submit" class="btn">Envoyer</button>
@@ -60,34 +60,45 @@
 </footer>
   
 <script>
-  const webhookURL = "https://discord.com/api/webhooks/1362811294851272824/fn2C1Z2zuJO8pzEznVxOGz5lKWrEjWW4jXwVRGb_M3VhEDLR6_Co0ewWaUm-ivnIcJg6"; // Remplace par ton vrai lien
+  const webhookURL = "https://discord.com/api/webhooks/TON_ID/TON_TOKEN";
 
   document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche l'envoi normal du formulaire
+    e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Vérifier si l'email est vide
+    if (!email) {
+      alert("Veuillez entrer votre adresse email !");
+      return;
+    }
+
+    // Vérifier si l'email est valide
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Veuillez entrer une adresse email valide !");
+      return;
+    }
 
     const payload = {
       embeds: [
         {
           title: "Nouveau Message du Site ✉️",
           fields: [
-            { name: "Nom", value: name, inline: true },
+            { name: "Nom", value: name || "Non renseigné", inline: true },
             { name: "Email", value: email, inline: true },
-            { name: "Message", value: message }
+            { name: "Message", value: message || "Pas de message" }
           ],
-          color: 5814783
+          color: ffffff
         }
       ]
     };
 
     fetch(webhookURL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     })
     .then(response => {

@@ -1,16 +1,155 @@
-/* Section #discord corrigée */
+/* Style Global */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  background: url('Frame 2.png') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Menu */
+.menu {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 20px auto;
+  padding: 10px 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #6a74e8;
+}
+
+/* Contenu Hero Center */
+.hero-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hero-content h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+}
+
+/* Sections Génériques */
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Section Présentation */
+#presentation {
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('screen.png') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+#presentation:hover {
+  transform: scale(1.05);
+}
+
+#presentation h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#presentation p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+#presentation .btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#presentation .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Section Discord */
 #discord {
   position: relative;
   width: 100%;
   padding: 150px 20px;
   text-align: center;
   color: white;
-  overflow: hidden; /* Pour gérer les effets */
-  border-radius: 0; /* Plus de border-radius vu que c'est pleine largeur */
-  margin: 0; /* Plus de marge auto */
+  overflow: hidden;
+  margin: 0;
+  border-radius: 0;
 }
 
-/* Image de fond floue avec halo noir */
+/* Image de fond floue + halo noir */
 #discord::before {
   content: "";
   position: absolute;
@@ -23,7 +162,7 @@
   z-index: 1;
 }
 
-/* Couche noire semi-transparente par-dessus */
+/* Couche noire supplémentaire */
 #discord::after {
   content: "";
   position: absolute;
@@ -35,8 +174,33 @@
   z-index: 2;
 }
 
-/* Le contenu par-dessus */
+/* Contenu visible */
 #discord > * {
   position: relative;
   z-index: 3;
+}
+
+#discord h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#discord p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+#discord .btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#discord .btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
 }

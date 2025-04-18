@@ -100,13 +100,13 @@ footer {
 
 /* Style de la section avec image de fond */
 #presentation {
-    background-image: url('ton-image.jpg'); /* Remplace 'ton-image.jpg' par le chemin de ton image */
+    background-image: url('screen.png'); /* Remplace 'ton-image.jpg' par le chemin de ton image */
     background-position: center;
     background-size: cover; /* L'image couvre toute la section */
     background-repeat: no-repeat;
     color: white; /* Texte en blanc */
     padding: 40px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
+    border-radius: 100px; /* Coins arrondis */
     text-align: center; /* Centrer le texte */
     margin: 20px auto; /* Espacement externe */
     max-width: 800px; /* Largeur maximale de la section */
@@ -129,7 +129,7 @@ footer {
 }
 
 #presentation .btn {
-    background-color: #3498db; /* Couleur du bouton */
+    background-color: rgba(0,0,0,0.5); /* Couleur du bouton */
     color: white; /* Texte en blanc */
     padding: 10px 20px; /* Espacement interne du bouton */
     text-decoration: none; /* Supprimer le soulignement */
@@ -139,5 +139,5 @@ footer {
 }
 
 #presentation .btn:hover {
-    background-color: #2980b9; /* Couleur au survol du bouton */
+    background-color: #ffffff; /* Couleur au survol du bouton */
 }

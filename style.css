@@ -106,7 +106,7 @@ footer {
     background-repeat: no-repeat;
     color: white; /* Texte en blanc */
     padding: 40px; /* Espacement interne */
-    border-radius: 100px; /* Coins arrondis */
+    border-radius: 10px; /* Coins arrondis */
     text-align: center; /* Centrer le texte */
     margin: 20px auto; /* Espacement externe */
     max-width: 800px; /* Largeur maximale de la section */
@@ -133,7 +133,7 @@ footer {
     color: white; /* Texte en blanc */
     padding: 10px 20px; /* Espacement interne du bouton */
     text-decoration: none; /* Supprimer le soulignement */
-    border-radius: 5px; /* Coins arrondis du bouton */
+    border-radius: 100px; /* Coins arrondis du bouton */
     font-size: 1rem;
     transition: background-color 0.3s ease; /* Transition de la couleur */
 }

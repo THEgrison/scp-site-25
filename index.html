@@ -81,11 +81,16 @@
   const title = document.getElementById('project-title');
   const description = document.getElementById('project-description');
   const button = document.getElementById('project-button');
+  const carouselContent = document.querySelector('.carousel-content');
 
   function updateProject(index) {
-    title.textContent = projects[index].title;
-    description.textContent = projects[index].description;
-    button.href = projects[index].buttonLink;
+    carouselContent.style.opacity = 0;
+    setTimeout(() => {
+      title.textContent = projects[index].title;
+      description.textContent = projects[index].description;
+      button.href = projects[index].buttonLink;
+      carouselContent.style.opacity = 1;
+    }, 300);
   }
 
   document.querySelector('.carousel-btn.right').addEventListener('click', () => {

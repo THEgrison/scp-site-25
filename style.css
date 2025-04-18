@@ -216,3 +216,10 @@ footer {
 .play-btn:hover svg {
   fill: black;
 }
+
+#discord .btn:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+}
+	

@@ -109,7 +109,7 @@ footer {
     border-radius: 10px; /* Coins arrondis */
     text-align: center; /* Centrer le texte */
     margin: 20px auto; /* Espacement externe */
-    max-width: 800px; /* Largeur maximale de la section */
+    max-width: 90%; /* Largeur maximale de la section */
     transition: transform 0.3s ease; /* Transition pour le zoom */
 }
 

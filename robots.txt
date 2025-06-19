@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ton-nom.github.io/scp-site-25/sitemap.xml
